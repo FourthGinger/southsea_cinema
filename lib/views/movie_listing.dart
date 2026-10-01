@@ -15,7 +15,26 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: const SizedBox.shrink(),
+      body: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text("Dracula (1931)"),
+                Text("(PG)"),
+              ],
+            ),
+            Text("Southsea Cinema Room"),
+            Text("Thursday 22 Oct 2026, 18:00 - ends at 19:14"),
+            Text(
+              "Please note that Discounts / Membership Benefits will be applied once you have selected your tickets",
+            ),
+            Text("Select Quantities (Up to 5 in total)"),
+            Text("Tickets"),
+          ],
+        ),
+      ),
     );
   }
 }
