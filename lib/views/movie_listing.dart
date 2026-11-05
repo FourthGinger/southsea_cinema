@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
+import 'package:southsea_cinema/models/movie.dart';
 
 class MovieListing extends StatefulWidget {
-  const MovieListing({super.key});
+  final Movie movie;
+
+  const MovieListing({super.key, required this.movie});
 
   @override
   State<MovieListing> createState() => _MovieListingState();
@@ -31,18 +34,18 @@ class _MovieListingState extends State<MovieListing> {
             Row(
               children: [
                 Text(
-                  "Dracula (1931) ",
+                  widget.movie.title,
                   style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
 
                 Text(
-                  "(PG)",
+                  "(${widget.movie.ageRating})",
                   style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -52,7 +55,7 @@ class _MovieListingState extends State<MovieListing> {
 
             Text("Southsea Cinema Room"),
 
-            Text("Thursday 22 Oct 2026, 18:00 - ends at 19:14"),
+            Text(widget.movie.screeningTime),
 
             SizedBox(height: 20),
 
@@ -91,7 +94,7 @@ class _MovieListingState extends State<MovieListing> {
                   ],
                 ),
                 SizedBox(width: 10),
-                Text("Adult (£7.50)"),
+                Text("Adult (£${widget.movie.ticketPrice.toStringAsFixed(2)})"),
               ],
             ),
 
