@@ -22,7 +22,7 @@ class MovieRepository {
         ageRating: '12A',
         screeningTime: 'Sunday 4 Oct 2026 18:00',
         ticketPrice: 7.50,
-        posterImagePath: 'assets/images/halloween.jpg',
+        posterImagePath: 'assets/images/ROTK.jpg',
       ),
     ];
   }
