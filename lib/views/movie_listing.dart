@@ -94,7 +94,7 @@ class _MovieListingState extends State<MovieListing> {
                   ],
                 ),
                 SizedBox(width: 10),
-                Text("Adult (£${widget.movie.ticketPrice.toStringAsFixed(2)})"),
+                Text("Adult (${widget.movie.formattedPrice})"),
               ],
             ),
 
