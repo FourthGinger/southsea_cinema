@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/models/movie.dart';
@@ -41,9 +40,7 @@ class MovieCard extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: 16),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -65,9 +62,7 @@ class MovieCard extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: 24),
-
             const Text(
               'BOOK TICKETS',
               style: TextStyle(
@@ -75,9 +70,7 @@ class MovieCard extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-
             const SizedBox(height: 16),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -90,7 +83,6 @@ class MovieCard extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 PrimaryButton(
                   label: 'BOOK NOW',
                   onPressed: () {

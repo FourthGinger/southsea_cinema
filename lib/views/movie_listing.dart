@@ -24,7 +24,7 @@ class _MovieListingState extends State<MovieListing> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(appTitle),
-        ),
+      ),
       drawer: const NavDrawer(),
       body: Container(
         color: Color(0xFF1B1E28),
@@ -40,7 +40,6 @@ class _MovieListingState extends State<MovieListing> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
                 Text(
                   "(${widget.movie.ageRating})",
                   style: TextStyle(
@@ -50,39 +49,28 @@ class _MovieListingState extends State<MovieListing> {
                 ),
               ],
             ),
-
             SizedBox(height: 20),
-
             Image.asset(
               widget.movie.posterImagePath,
               width: 140,
               height: 210,
               fit: BoxFit.cover,
             ),
-
             SizedBox(height: 20),
-
             Text("Southsea Cinema Room"),
-
             Text(widget.movie.screeningTime),
-
             SizedBox(height: 20),
-
             Text(
               "Please note that Discounts / Membership Benefits will be applied once you have selected your tickets",
             ),
-
             Text("Select Quantities (Up to 5 in total)"),
-
             SizedBox(height: 20),
-
             Text(
               "Tickets",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             Row(
               children: [
                 DropdownMenu<int>(
@@ -106,9 +94,7 @@ class _MovieListingState extends State<MovieListing> {
                 Text("Adult (${widget.movie.formattedPrice})"),
               ],
             ),
-
             SizedBox(height: 20),
-
             PrimaryButton(
               label: "ADD TO ORDER",
               onPressed: () {

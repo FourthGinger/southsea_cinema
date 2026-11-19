@@ -38,7 +38,7 @@ void main() {
       expect(movie?.title, 'Kubo and the two strings');
       expect(movie?.ticketPrice, 6.00);
     });
-    
+
     test('getMovieById returns null when id does not exist', () {
       final MovieRepository repository = MovieRepository();
       final Movie? movie = repository.getMovieById('non-existent');
@@ -59,6 +59,5 @@ void main() {
 
       expect(repository.getMovies(), movies);
     });
-
   });
 }

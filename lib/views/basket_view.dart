@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/models/cart_item.dart';
@@ -44,9 +43,7 @@ class _BasketViewState extends State<BasketView> {
               fontWeight: FontWeight.bold,
             ),
           ),
-
           const SizedBox(height: 24),
-
           const Row(
             children: [
               Expanded(
@@ -81,9 +78,7 @@ class _BasketViewState extends State<BasketView> {
               ),
             ],
           ),
-
           const SizedBox(height: 16),
-
           for (int index = 0; index < items.length; index++)
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
@@ -100,7 +95,6 @@ class _BasketViewState extends State<BasketView> {
                       ),
                     ),
                   ),
-
                   Expanded(
                     flex: 5,
                     child: Text(
@@ -113,7 +107,6 @@ class _BasketViewState extends State<BasketView> {
                       ),
                     ),
                   ),
-
                   Expanded(
                     flex: 2,
                     child: Text(
@@ -123,7 +116,6 @@ class _BasketViewState extends State<BasketView> {
                       ),
                     ),
                   ),
-
                   IconButton(
                     style: IconButton.styleFrom(
                       backgroundColor: cinemaBrand,
@@ -144,9 +136,7 @@ class _BasketViewState extends State<BasketView> {
                 ],
               ),
             ),
-
           const SizedBox(height: 8),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -160,9 +150,7 @@ class _BasketViewState extends State<BasketView> {
               ),
             ],
           ),
-
           const SizedBox(height: 12),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -184,9 +172,7 @@ class _BasketViewState extends State<BasketView> {
               ),
             ],
           ),
-
           const SizedBox(height: 30),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -201,8 +187,7 @@ class _BasketViewState extends State<BasketView> {
                 onPressed: () {
                   setState(() {
                     cart.clear();
-                    _confirmationMessage =
-                        'Order placed successfully';
+                    _confirmationMessage = 'Order placed successfully';
                   });
                 },
               ),
