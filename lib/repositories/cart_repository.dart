@@ -43,10 +43,17 @@ class CartRepository {
   }
 
   double getTotalDue() {
-    return getSubtotal();
+    return getSubtotal() + getServiceCharge();
   }
 
   void clear() {
     _items.clear();
+  }
+
+  double getServiceCharge() {
+    if (_items.isEmpty) {
+      return 0.0;
+    }
+    return 4.00;
   }
 }
