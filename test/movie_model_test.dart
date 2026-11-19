@@ -16,7 +16,10 @@ void main() {
 
       expect(movie.id, '1');
       expect(movie.title, 'Kubo and the two Strings');
-      expect(movie.synopsis, 'Laika stop motion film about a boy and his instrument.');
+      expect(
+        movie.synopsis,
+        'Laika stop motion film about a boy and his instrument.',
+      );
       expect(movie.ageRating, 'PG');
       expect(movie.screeningTime, 'Friday 6 Nov 2026 15:00');
       expect(movie.ticketPrice, 6.0);
@@ -49,6 +52,50 @@ void main() {
       );
 
       expect(movie.formattedPrice, '£7.50');
+    });
+
+    test('Movie converts to and from JSON', () {
+      final json = <String, dynamic>{
+        'id': '1',
+        'title': 'Kubo and the two strings',
+        'synopsis': 'Laika stop motion film about a boy and his instrument.',
+        'ageRating': 'PG',
+        'screeningTime': 'Friday 6 Nov 2026 15:00',
+        'ticketPrice': 6.00,
+        'posterImagePath': 'assets/images/Kubo.jpg',
+      };
+
+      final movie = Movie.fromJson(json);
+
+      expect(movie.id, '1');
+      expect(movie.title, 'Kubo and the two strings');
+      expect(
+        movie.synopsis,
+        'Laika stop motion film about a boy and his instrument.',
+      );
+      expect(movie.ageRating, 'PG');
+      expect(movie.screeningTime, 'Friday 6 Nov 2026 15:00');
+      expect(movie.ticketPrice, 6.00);
+      expect(movie.posterImagePath, 'assets/images/Kubo.jpg');
+
+      expect(movie.toJson(), json);
+    });
+
+    test('Movie converts whole-number JSON prices to double', () {
+      final json = <String, dynamic>{
+        'id': '1',
+        'title': 'Kubo and the two strings',
+        'synopsis': 'Laika stop motion film about a boy and his instrument.',
+        'ageRating': 'PG',
+        'screeningTime': 'Friday 6 Nov 2026 15:00',
+        'ticketPrice': 6,
+        'posterImagePath': 'assets/images/Kubo.jpg',
+      };
+
+      final movie = Movie.fromJson(json);
+
+      expect(movie.ticketPrice, isA<double>());
+      expect(movie.ticketPrice, 6.0);
     });
   });
 }
