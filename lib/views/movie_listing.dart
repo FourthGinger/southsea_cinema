@@ -50,6 +50,15 @@ class _MovieListingState extends State<MovieListing> {
 
             SizedBox(height: 20),
 
+            Image.asset(
+              widget.movie.posterImagePath,
+              width: 140,
+              height: 210,
+              fit: BoxFit.cover,
+            ),
+
+            SizedBox(height: 20),
+
             Text("Southsea Cinema Room"),
 
             Text(widget.movie.screeningTime),
