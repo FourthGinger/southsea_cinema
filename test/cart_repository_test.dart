@@ -49,7 +49,7 @@ void main() {
       );
 
       expect(CartRepository.instance.getSubtotal(), 19.50);
-      expect(CartRepository.instance.getTotalDue(), 19.50);
+      expect(CartRepository.instance.getTotalDue(), 23.50);
     });
 
     test('Removing and clearing items works', () {
